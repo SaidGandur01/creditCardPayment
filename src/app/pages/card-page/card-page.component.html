@@ -1,0 +1,71 @@
+<div class="container">
+    <form (ngSubmit)="onSubmit()" [formGroup]="paymentForm">
+        <div class="container__sub">
+            <label for="cardNumber">Credit Card Number</label>
+            <input type="text" name="cardNumber" formControlName="cardNumber">
+            <div *ngIf="f.cardNumber.invalid && (f.cardNumber.dirty || f.cardNumber.touched)">
+                <span *ngIf="f.cardNumber.errors.required">
+                Please introduce a credit card number.
+            </span>
+                <span *ngIf="f.cardNumber.errors.pattern">
+                Please introduce only string type characters.
+            </span>
+            </div>
+
+        </div>
+        <div class="container__sub">
+            <label for="cardHolder">Card Holder</label>
+            <input type="text" name="cardHolder" formControlName="cardHolder">
+            <div *ngIf="f.cardHolder.invalid && (f.cardHolder.dirty || f.cardHolder.touched)">
+                <span *ngIf="f.cardHolder.errors.required">
+                Please introduce a card holder.
+            </span>
+                <span *ngIf="f.cardHolder.errors.pattern">
+                Please introduce only string type characters.
+            </span>
+            </div>
+        </div>
+        <div class="container__sub">
+            <label for="expDate">Expiration Date</label>
+            <input type="date" name="expDate" formControlName="expDate">
+            <div *ngIf="f.expDate.invalid && (f.expDate.dirty || f.expDate.touched)">
+                <span *ngIf="f.expDate.errors.required">
+                Please introduce a date.
+            </span>
+                <span *ngIf="f.expDate.errors.dateValidation">
+                Date must be greater than today.
+            </span>
+            </div>
+        </div>
+        <div class="container__sub">
+            <label for="ccvCode">Security Code</label>
+            <input type="text" name="ccvCode" formControlName="ccvCode">
+            <div *ngIf="f.ccvCode.invalid && (f.ccvCode.dirty || f.ccvCode.touched)">
+                <span *ngIf="f.ccvCode.errors.lengthValidation">
+                Ccv code must be 3 digits.
+            </span>
+                <span *ngIf="f.ccvCode.errors.pattern">
+                Please introduce only string type characters.
+            </span>
+            </div>
+        </div>
+        <div class="container__sub">
+            <label for="amount">Amount</label>
+            <input type="number" name="amount" formControlName="amount">
+            <div *ngIf="f.amount.invalid && (f.amount.dirty || f.amount.touched)">
+                <span *ngIf="f.amount.errors.required">
+                Please introduce an amount.
+            </span>
+                <span *ngIf="f.amount.errors.pattern">
+                Amount must be greater than zero.
+            </span>
+            </div>
+        </div>
+
+        <div class="button__container">
+            <button [disabled]="!paymentForm.valid" type="submit">Make Payment</button>
+        </div>
+    </form>
+</div>
+
+<app-dto *ngIf="flag" [cardNumber]="paymentForm.value.cardNumber" [cardHolder]="paymentForm.value.cardHolder" [expDate]="paymentForm.value.expDate" [ccvCode]="paymentForm.value.ccvCode" [amount]="paymentForm.value.amount"></app-dto>

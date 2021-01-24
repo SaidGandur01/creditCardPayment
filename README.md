@@ -1,6 +1,9 @@
 # TestInterview
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.7.
+## Description
+
+It is important to clarify that it is necessary once the repository has been cloned to install the node dependencies using the command: npm install in the root folder of the project, having said that, the ng serve command can be executed to be able to execute the code.
 
 ## Development server
 

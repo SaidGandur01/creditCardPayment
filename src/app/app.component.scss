@@ -1,0 +1,36 @@
+h1 {
+    padding: 3% 0;
+    color: #FFFFFF;
+    text-align: center;
+    background-color: #22223b;
+}
+
+h3 {
+    color: #FFFFFF;
+    font-size: 2rem;
+    text-transform: capitalize;
+    margin-bottom: 3%;
+}
+
+.container {
+    padding: 5%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.card__container {
+    margin: 0 auto 3%;
+    width: 70%;
+    background: #f2e9e4;
+    border-radius: 20px;
+    padding: 2% 3%;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+.card__container:hover {
+    transform: translateY(-10px);
+    box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all ease 0.2s;
+}

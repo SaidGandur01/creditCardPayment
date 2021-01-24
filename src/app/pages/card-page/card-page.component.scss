@@ -1,0 +1,31 @@
+.container {
+    padding: 5% 10%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.container__sub {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3%;
+    label {
+        margin-bottom: 1%;
+        color: white;
+        font-size: 1.2rem;
+    }
+    input {
+        padding: 1.5%;
+        border-radius: 10px;
+        font-size: 1rem;
+    }
+    span {
+        margin-top: 1%;
+        color: #e09f3e;
+        font-weight: 700;
+    }
+}
