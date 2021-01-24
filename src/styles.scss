@@ -43,3 +43,11 @@ html {
 .toast-success {
     background-color: #e09049 !important;
 }
+
+// Medium devices (tablets, 768px and up)
+@media (max-width: 768px) {
+    button {
+        padding: 2%;
+        width: 100%;
+    }
+}
