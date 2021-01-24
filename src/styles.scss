@@ -47,7 +47,7 @@ html {
 // Medium devices (tablets, 768px and up)
 @media (max-width: 768px) {
     button {
-        padding: 2%;
-        width: 100%;
+        padding: 3% !important;
+        width: 90% !important;
     }
 }
